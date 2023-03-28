@@ -1,0 +1,19 @@
+#ignore reports
+pipeline-reports
+cypress/videos
+cypress/screenshots
+
+#ignore node_modules
+node_modules
+
+#ignore lock
+package-lock.json
+
+#ignore others
+cypress/system/.DS_Store
+cypress/.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

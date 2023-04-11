@@ -2,6 +2,8 @@ import { defineConfig } from 'cypress'
 
 export default defineConfig({
   e2e: {
+    viewportWidth: 2560,
+    viewportHeight: 1440,
     watchForFileChanges: false,
     baseUrl: process.env.baseUrl,
     defaultCommandTimeout: 25000,

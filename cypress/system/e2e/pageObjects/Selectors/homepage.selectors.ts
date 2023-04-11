@@ -1,0 +1,6 @@
+export const brands_panel = '.brands-name'
+export const category_panel = 'category-products'
+export const feature_items = '.features_items > div'
+export const feature_items_addtocart_button = '.add-to-cart'
+export const feature_items_modal_success = '.modal-header > h4'
+export const feature_items_view_cart = '.modal-body > p'

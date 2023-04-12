@@ -13,7 +13,7 @@ jobs:
         uses: cypress-io/github-action@v5.6.1
         with:
           browser: chrome
-          build: npx cypress run ENVIRONMENT=prod email='$EMAIL' password='$PW'
+          build: npx cypress run ENVIRONMENT=prod --env email='$EMAIL',password='$PW'
           start: npm start
         env:
           EMAIL: ${{ secrets.TEST_EMAIL }}

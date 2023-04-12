@@ -18,5 +18,7 @@ jobs:
           browser: chrome
           build: npm run mac:prod
           start: npm start
-          
+        env:
+          email: ${{secrets.TEST_EMAIL}}
+          password: ${{secrets.TEST_PW}}
      

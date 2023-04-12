@@ -6,23 +6,12 @@ jobs:
   cypress-run:
     runs-on: macos-latest
     steps:
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.2
-
       - name: Checkout
         uses: actions/checkout@v2.7.0
-        
+
       - name: Cypress.io
         uses: cypress-io/github-action@v5.6.1
-        env: 
-          EMAIL: ${{ secrets.TEST_EMAIL }}
-          PW: ${{secrets.TEST_PW}}
         with:
           browser: chrome
-          build: npx cypress run ENVIRONMENT=prod email=asdasdas password=asdasdasd
+          build: npx cypress run ENVIRONMENT=prod email=asdasdas,password=asdasdasd
           start: npm start
-       
-     
-       
- 
-        

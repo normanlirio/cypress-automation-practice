@@ -16,7 +16,7 @@ jobs:
         uses: cypress-io/github-action@v5.6.1
         with:
           browser: chrome
-          build: npm run wind:prod
+          build: npm run mac:prod
           start: npm start
         env:
           ENVIRONMENT: "prod"

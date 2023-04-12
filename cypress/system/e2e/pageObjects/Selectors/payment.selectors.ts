@@ -1,0 +1,8 @@
+export const payment_card_name = '[data-qa="name-on-card"]'
+export const payment_card_number = '[data-qa="card-number"]'
+export const payment_cvc = '[data-qa="cvc"]'
+export const payment_expiry_month = '[data-qa="expiry-month"]'
+export const payment_expiry_year = '[data-qa="expiry-year"]'
+export const payment_paybutton = '[data-qa="pay-button"]'
+export const paymentdone_continue_button = '[data-qa="continue-button"]'
+export const paymentdone_header = '[data-qa="order-placed"]'

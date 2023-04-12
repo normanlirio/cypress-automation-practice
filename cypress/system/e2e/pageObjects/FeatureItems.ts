@@ -1,5 +1,6 @@
 import { HomePage } from './HomePage'
 import * as FeatureItemsSelectors from './Selectors/homepage.selectors'
+import { viewcart_proceed } from './Selectors/viewcart.selectors'
 
 class FeatureItems extends HomePage {
   hoverToProduct(position: number) {
@@ -23,6 +24,7 @@ class FeatureItems extends HomePage {
 
   clickViewCart() {
     cy.get(FeatureItemsSelectors.feature_items_view_cart).find('a').click()
+    cy.get(viewcart_proceed).should('be.visible')
     return this
   }
 }

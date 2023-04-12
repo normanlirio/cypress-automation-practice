@@ -19,7 +19,7 @@ jobs:
           PW: ${{secrets.TEST_PW}}
         with:
           browser: chrome
-          build: npx cypress run ENVIRONMENT=prod email='${{ secrets.TEST_EMAIL }}' password='${{secrets.TEST_PW}}' --browser chrome
+          build: npx cypress run ENVIRONMENT=prod email=asdasdas password=asdasdasd
           start: npm start
        
      

@@ -6,6 +6,9 @@ jobs:
   cypress-run:
     runs-on: macos-latest
     steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+        
       - name: Checkout
         uses: actions/checkout@v2.7.0
         

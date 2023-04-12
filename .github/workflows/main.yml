@@ -21,3 +21,6 @@ jobs:
         env: 
           EMAIL: ${{ secrets.TEST_EMAIL }}
           PW: ${{secrets.TEST_PW}}
+      - name: Print email and password
+        run: echo "$EMAIL $PW"
+        

@@ -11,7 +11,10 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2.7.0
-
+      
+      - name: Print EMAIL and PW
+        run: echo ${{ secrets.TEST_EMAIL }}
+        
       - name: Cypress.io
         uses: cypress-io/github-action@v5.6.1
         with:
@@ -21,6 +24,7 @@ jobs:
         env: 
           EMAIL: ${{ secrets.TEST_EMAIL }}
           PW: ${{secrets.TEST_PW}}
-      - name: Print email and password
-        run: echo "$EMAIL $PW"
+     
+       
+ 
         

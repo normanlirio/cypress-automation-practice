@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "win:ci:prod" : "cypress run ENVIRONMENT=prod --env email=${{secrets.TEST_EMAIL}},password${{secrets.TEST_PW}} --browser chrome",
-    "win:prod" : "cypress run ENVIRONMENT=prod --env email=${{secrets.TEST_EMAIL}},password${{secrets.TEST_PW}} --browser chrome",
-    "mac:prod" : "ENVIRONMENT=prod email='$EMAIL' password='$PW' npx cypress run"
+    "win:ci:prod" : "cypress run ENVIRONMENT=prod --env email='$EMAIL',password='$PW' --browser chrome"
   },
   "keywords": [],
   "author": "",

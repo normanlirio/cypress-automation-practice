@@ -8,8 +8,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.7.0
-
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm run mac:prod
+        
+      - name: Cypress.io
+        uses: cypress-io/github-action@v5.6.1
+        with:
+          browser: chrome
+          build: npm run build
+          start: npm start
+        env:
+          ENVIRONMENT: "prod"
+          email: ${{secrets.TEST_EMAIL}}
+          password: ${{secrets.TEST_PW}}
+          
+     

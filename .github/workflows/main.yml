@@ -1,10 +1,7 @@
 name: End to End tests
 
 on: [push]
-env:
-  EMAIL: ${{ secrets.TEST_EMAIL }}
-  PW: ${{ secrets.TEST_PW }}
-  
+
 jobs:
   cypress-run:
     runs-on: windows-latest
@@ -17,8 +14,10 @@ jobs:
         with:
           browser: chrome
           build: npm run win:ci:prod
-      
-          
+        env:
+          CYPRESS_email: ${{ secrets.TEST_EMAIL }}
+          CYPRESS_password: ${{ secrets.TEST_PW }}
+
       - name: Retrieve Artifacts
         uses: actions/upload-artifact@v3
         if: always()

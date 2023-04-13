@@ -14,7 +14,6 @@ jobs:
         with:
           browser: chrome
           build: npm run win:ci:prod
-          start: npm start
         env:
           EMAIL: ${{ secrets.TEST_EMAIL }}
           PW: ${{ secrets.TEST_PW }}

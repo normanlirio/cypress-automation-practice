@@ -18,8 +18,9 @@ jobs:
         env:
           EMAIL: ${{ secrets.TEST_EMAIL }}
           PW: ${{ secrets.TEST_PW }}
+          
       - name: Retrieve Artifacts
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos

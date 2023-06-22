@@ -5,6 +5,9 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: windows-latest
+    env:
+      ENVIRONMENT: prod
+      
     steps:
       - name: Checkout
         uses: actions/checkout@v2.7.0

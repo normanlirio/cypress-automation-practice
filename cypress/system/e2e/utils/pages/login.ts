@@ -27,3 +27,10 @@ export const assertLogin = (position: number) => {
     .find('a')
     .should('have.text', ' Logout')
 }
+
+Cypress.Commands.add('login', (email: string, password: string) => {
+  cy.visit('login')
+  cy.get(login_email).should('be.visible').type(email)
+  cy.get(login_password).should('be.visible').type(password)
+  cy.get(login_button).should('be.visible').click()
+})

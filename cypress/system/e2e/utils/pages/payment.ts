@@ -1,4 +1,4 @@
-export const feature_items = '.features_items > div'\
+export const feature_items = '.features_items > div'
 export const payment_card_name = '[data-qa="name-on-card"]'
 export const payment_card_number = '[data-qa="card-number"]'
 export const payment_cvc = '[data-qa="cvc"]'

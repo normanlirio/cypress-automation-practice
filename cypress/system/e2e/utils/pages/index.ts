@@ -1,5 +1,5 @@
 import * as Checkout from './checkout'
-import * as FeatureItems from './featureItems'
+import * as FeatureItems from './featureitems'
 import * as HomePage from './homepage'
 import * as Login from './login'
 import * as Payment from './payment'

@@ -1,6 +1,4 @@
-import Checkout from '../utils/pages/checkout'
-import FeatureItems from '../utils/pages/featureItems'
-import { Payment, ViewCart } from '../utils/pages/'
+import { Checkout, FeatureItems, Payment, ViewCart } from '../utils/pages/'
 import * as TestData from '../utils/TestData'
 
 describe('Checkout e2e', () => {

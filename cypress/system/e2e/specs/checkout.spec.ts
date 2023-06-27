@@ -1,7 +1,6 @@
-import Checkout from '../pageObjects/Checkout'
-import FeatureItems from '../pageObjects/FeatureItems'
-import Payment from '../pageObjects/Payment'
-import ViewCart from '../pageObjects/ViewCart'
+import Checkout from '../utils/pages/checkout'
+import FeatureItems from '../utils/pages/featureItems'
+import { Payment, ViewCart } from '../utils/pages/'
 import * as TestData from '../utils/TestData'
 
 describe('Checkout e2e', () => {
@@ -10,19 +9,22 @@ describe('Checkout e2e', () => {
   })
 
   it('can checkout an order', () => {
-    FeatureItems.hoverToProduct(3).clickAddToCartButton().clickViewCart()
+    FeatureItems.hoverToProduct(3)
+    FeatureItems.clickAddToCartButton()
+    FeatureItems.clickViewCart()
 
     ViewCart.clickProceedToCheckout()
 
-    Checkout.typeComment(TestData.comment).placeOrder()
+    Checkout.typeComment(TestData.comment)
+    Checkout.placeOrder()
 
     Payment.typeCardName(TestData.card_name)
-      .typeCardNumber(TestData.card_number)
-      .typeCvc(TestData.cvc)
-      .typeExpiryMonth(TestData.expiry_month)
-      .typeExpiryYear(TestData.expiry_year)
-      .clickPayButton()
-      .confirmOrder(TestData.payment_done_header_text)
-      .continueToHomePage()
+    Payment.typeCardNumber(TestData.card_number)
+    Payment.typeCvc(TestData.cvc)
+    Payment.typeExpiryMonth(TestData.expiry_month)
+    Payment.typeExpiryYear(TestData.expiry_year)
+    Payment.clickPayButton()
+    Payment.confirmOrder(TestData.payment_done_header_text)
+    Payment.continueToHomePage()
   })
 })

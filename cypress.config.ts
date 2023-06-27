@@ -20,7 +20,7 @@ export default defineConfig({
           break
         }
         default: {
-          config.baseUrl = config.env.prod.baseUrl
+          config.baseUrl = config.env.dev.baseUrl
         }
       }
       return config

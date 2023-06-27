@@ -1,15 +1,15 @@
-import Login from '../pageObjects/Login'
+import { Login } from '../utils/pages'
 
 describe('Login Page', () => {
   before(() => {
-    Login.nagivate('login')
+    cy.visit('login')
   })
 
   it('should login the user sucessfully', () => {
     Login.loginFormIsVisible()
-      .typeEmail(Cypress.env('email'))
-      .typePassword(Cypress.env('password'))
-      .clickLoginButton()
-      .assertLogin(3)
+    Login.typeEmail(Cypress.env('email'))
+    Login.typePassword(Cypress.env('password'))
+    Login.clickLoginButton()
+    Login.assertLogin(3)
   })
 })
